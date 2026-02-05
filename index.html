@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shake Wag &amp; Roll Pro Homepage</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f49d25",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221a10",
+                        "slate-blue": "#475569", 
+                        "slate-blue-dark": "#334155",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "sans": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-[#181511] flex flex-col min-h-screen overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full bg-white border-b border-[#f5f3f0] px-4 md:px-10 py-4 shadow-sm">
+<div class="max-w-[1400px] mx-auto flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">pets</span>
+<h2 class="text-primary text-2xl font-extrabold leading-tight tracking-tighter">Shake Wag &amp; Roll</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-10 items-center">
+<a class="text-[#181511] text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" href="#home">Home</a>
+<a class="text-[#181511] text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" href="#shop">Shop</a>
+<a class="text-[#181511] text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-[#181511] text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" data-action="open-contact" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-3 justify-end">
+<div class="hidden md:flex items-center gap-3 justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-[#181511] transition-colors" data-action="open-search" title="Search">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex items-center justify-center rounded-full h-10 px-5 bg-black hover:bg-gray-800 text-white text-sm font-bold transition-colors" data-action="open-cart" title="Open cart">
+<span class="material-symbols-outlined text-lg mr-2">shopping_bag</span>
+<span data-cart-count="">Cart (0)</span>
+</button>
+</div>
+<button class="md:hidden flex items-center justify-center rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-[#181511] transition-colors" data-action="open-menu" title="Menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full">
+<section class="w-full bg-white overflow-hidden" id="home">
+<div class="grid grid-cols-1 md:grid-cols-2 min-h-[600px] md:min-h-[700px]">
+<div class="flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 py-16 order-2 md:order-1 bg-[#f8f7f5]">
+<div class="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-primary font-bold text-xs uppercase tracking-widest">
+                        New Collection 2024
+                    </div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-[#181511] mb-6">
+                        Everything 4 Your <span class="text-primary">Dogs</span> Needs.
+                    </h1>
+<p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-lg mb-8">
+                        Premium quality toys, treats, and accessories designed to keep those tails wagging all day long.
+                    </p>
+<div class="flex gap-4">
+<button class="h-14 px-8 bg-black text-white rounded-lg text-lg font-bold tracking-wide hover:bg-gray-800 transition-all transform hover:-translate-y-1 shadow-lg whitespace-nowrap shrink-0" data-action="open-shop">
+                            Shop Now
+                        </button>
+<button class="h-14 px-8 bg-white border-2 border-black text-black rounded-lg text-lg font-bold tracking-wide hover:bg-gray-50 transition-colors whitespace-nowrap shrink-0" data-action="open-cart">
+                            View Cart
+                        </button>
+</div>
+</div>
+<div class="relative w-full h-[500px] md:h-full order-1 md:order-2">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Two happy dogs jumping and playing in a green field" style='background-image: url("images/Top%20Header%20Picture.jpg");'>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white border-b border-gray-100 py-8">
+<div class="max-w-[1200px] mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+<div class="flex items-center justify-center gap-4 py-2">
+<span class="material-symbols-outlined text-primary text-4xl">verified</span>
+<div>
+<h3 class="font-bold text-lg text-[#181511]">Quality Guaranteed</h3>
+<p class="text-sm text-gray-500">Hand-picked premium products</p>
+</div>
+</div>
+<div class="flex items-center justify-center gap-4 py-2">
+<span class="material-symbols-outlined text-primary text-4xl">local_shipping</span>
+<div>
+<h3 class="font-bold text-lg text-[#181511]">Fast Shipping</h3>
+<p class="text-sm text-gray-500">Free delivery on orders over $50</p>
+</div>
+</div>
+<div class="flex items-center justify-center gap-4 py-2">
+<span class="material-symbols-outlined text-primary text-4xl">health_and_safety</span>
+<div>
+<h3 class="font-bold text-lg text-[#181511]">Pet Safe</h3>
+<p class="text-sm text-gray-500">100% non-toxic materials</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1400px] mx-auto px-4 md:px-8 py-20" id="shop">
+<div class="flex items-end justify-between mb-10">
+<div>
+<h2 class="text-[#181511] text-4xl font-extrabold tracking-tight mb-2">Best Sellers</h2>
+<p class="text-gray-500 font-medium">Top picks from the pack this month.</p>
+</div>
+<a class="hidden sm:flex items-center gap-2 text-primary font-bold hover:text-orange-600 transition-colors" data-action="open-shop" href="#">
+                    View All Products <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group bg-white rounded-2xl p-3 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
+<div class="relative overflow-hidden rounded-xl bg-gray-100 aspect-square mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style='background-image: url("images/large-vecteezy_comprehensive-dog-images-all-breeds-and-categories-for_49237769_large.jpg");'></div>
+<div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">HOT</div>
+</div>
+<div class="px-2 pb-2">
+<h3 class="text-lg font-bold text-[#181511] mb-1">Durable Rope Toy</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-xl font-extrabold text-[#181511]">$14.99</span>
+<button class="bg-black text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors" data-action="add-to-cart" title="Add to cart">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-2xl p-3 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
+<div class="relative overflow-hidden rounded-xl bg-gray-100 aspect-square mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style='background-image: url("images/large-vecteezy_comprehensive-dog-images-all-breeds-and-categories-for_49237782_large.jpg");'></div>
+</div>
+<div class="px-2 pb-2">
+<h3 class="text-lg font-bold text-[#181511] mb-1">Gourmet Bone Treats</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-xl font-extrabold text-[#181511]">$22.50</span>
+<button class="bg-black text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors" data-action="add-to-cart" title="Add to cart">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-2xl p-3 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
+<div class="relative overflow-hidden rounded-xl bg-gray-100 aspect-square mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style='background-image: url("images/large-vecteezy_comprehensive-dog-images-all-breeds-and-categories-for_49237786_large.jpg");'></div>
+<div class="absolute top-3 left-3 bg-black text-white text-xs font-bold px-2 py-1 rounded">NEW</div>
+</div>
+<div class="px-2 pb-2">
+<h3 class="text-lg font-bold text-[#181511] mb-1">Classic Red Collar</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-xl font-extrabold text-[#181511]">$18.00</span>
+<button class="bg-black text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors" data-action="add-to-cart" title="Add to cart">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-2xl p-3 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
+<div class="relative overflow-hidden rounded-xl bg-gray-100 aspect-square mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style='background-image: url("images/maggie%20santa%20rosa.jpg");'></div> 
+</div>
+<div class="px-2 pb-2">
+<h3 class="text-lg font-bold text-[#181511] mb-1">Active Play Set</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-xl font-extrabold text-[#181511]">$35.00</span>
+<button class="bg-black text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors" data-action="add-to-cart" title="Add to cart">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center sm:hidden">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:text-orange-600 transition-colors" data-action="open-shop" href="#">
+                    View All Products <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</section>
+<section class="w-full py-16 px-4 bg-white" id="about">
+<div class="max-w-[1200px] mx-auto">
+<div class="bg-slate-blue rounded-[2.5rem] overflow-hidden shadow-2xl">
+<div class="flex flex-col lg:flex-row min-h-[500px]">
+<div class="flex-1 p-12 lg:p-20 flex flex-col justify-center order-2 lg:order-1 relative z-10">
+<div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-white text-9xl">pets</span>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-1 bg-primary rounded-full"></div>
+<span class="text-primary font-bold uppercase tracking-widest text-sm">About Us</span>
+</div>
+<h2 class="text-white text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+                                    Our Mission
+                                </h2>
+<p class="text-slate-200 text-lg leading-loose font-medium max-w-lg">
+                                    To make every tail wag harder. We believe in providing only the best for your furry companions, mixing vibrant style with heavy-duty durability. Because they aren't just pets, they're family.
+                                </p>
+<div class="pt-4">
+<button class="group flex items-center gap-3 bg-white text-slate-blue h-14 px-8 rounded-lg font-bold hover:bg-primary hover:text-white transition-all" data-action="learn-story">
+                                        Learn Our Story
+                                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-12 mt-12 border-t border-slate-500/30 pt-8">
+<div>
+<div class="text-3xl font-black text-white">100%</div>
+<div class="text-slate-300 text-sm font-medium mt-1">Safe Materials</div>
+</div>
+<div>
+<div class="text-3xl font-black text-white">5k+</div>
+<div class="text-slate-300 text-sm font-medium mt-1">Happy Pups</div>
+</div>
+</div>
+</div>
+<div class="flex-1 relative min-h-[400px] lg:min-h-auto order-1 lg:order-2">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-alt="Artistic closeup of a happy dog's face with soft natural lighting, resembling a floral aesthetic" style='background-image: url("images/floral%20dog.jpg");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-blue/80 to-transparent lg:hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1400px] mx-auto px-4 py-20 bg-[#f8f7f5]">
+<div class="text-center mb-16">
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Testimonials</span>
+<h2 class="text-4xl font-black text-[#181511] mt-3">What the Pack Says</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 relative">
+<span class="material-symbols-outlined text-gray-100 text-6xl absolute top-6 right-6">format_quote</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-gray-600 text-lg leading-relaxed relative z-10">
+                        "The quality is unmatched! My golden destroyer usually tears through toys in minutes, but these have lasted weeks."
+                    </p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">SJ</div>
+<div>
+<h4 class="font-bold text-[#181511]">Sarah Jenkins</h4>
+<p class="text-xs text-gray-400">Owner of Max</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 relative">
+<span class="material-symbols-outlined text-gray-100 text-6xl absolute top-6 right-6">format_quote</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-gray-600 text-lg leading-relaxed relative z-10">
+                        "Fast shipping and the packaging was adorable. The treats are a huge hit with my picky eater."
+                    </p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">MR</div>
+<div>
+<h4 class="font-bold text-[#181511]">Mike Ross</h4>
+<p class="text-xs text-gray-400">Owner of Buster</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 relative">
+<span class="material-symbols-outlined text-gray-100 text-6xl absolute top-6 right-6">format_quote</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="text-gray-600 text-lg leading-relaxed relative z-10">
+                        "Finally found a collar that is both stylish and comfortable for my pup. Highly recommend Shake Wag &amp; Roll!"
+                    </p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">EL</div>
+<div>
+<h4 class="font-bold text-[#181511]">Emily Liu</h4>
+<p class="text-xs text-gray-400">Owner of Luna</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="max-w-[1200px] mx-auto px-4 pb-20 pt-10">
+<div class="bg-slate-blue rounded-3xl p-10 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-xl relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-64 h-64 bg-slate-500/20 rounded-full blur-3xl"></div>
+<div class="flex flex-col gap-4 max-w-xl relative z-10 text-center lg:text-left">
+<h3 class="text-white text-3xl md:text-4xl font-black tracking-tight">Join the Pack</h3>
+<p class="text-slate-200 text-lg font-medium">Sign up for exclusive offers, new product drops, and expert dog care tips delivered straight to your inbox.</p>
+</div>
+<div class="w-full lg:w-auto relative z-10">
+<form class="flex flex-col sm:flex-row gap-3 w-full lg:min-w-[400px]">
+<input class="h-14 px-6 rounded-lg border-0 bg-white/10 text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-primary flex-1 backdrop-blur-sm" placeholder="Enter your email address" type="email"/>
+<button class="h-14 px-8 bg-black text-white rounded-lg font-bold hover:bg-gray-900 transition-colors whitespace-nowrap shadow-lg">
+                            Subscribe
+                        </button>
+</form>
+<p class="text-slate-400 text-xs mt-3 text-center lg:text-left">No spam, just wags. Unsubscribe anytime.</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-slate-blue-dark text-white pt-20 pb-10 px-6 border-t border-slate-700">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">pets</span>
+<h2 class="text-white text-xl font-extrabold">Shake Wag &amp; Roll</h2>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                    Designing happiness for dogs and their humans since 2023. We are committed to quality, safety, and endless fun.
+                </p>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="font-bold text-lg tracking-wide">Shop</h3>
+<div class="flex flex-col gap-3 text-gray-300 text-sm font-medium">
+<a class="hover:text-primary transition-colors" data-category="Toys" href="#shop">Toys</a>
+<a class="hover:text-primary transition-colors" data-category="Treats" href="#shop">Treats</a>
+<a class="hover:text-primary transition-colors" data-category="Accessories" href="#shop">Accessories</a>
+<a class="hover:text-primary transition-colors" data-category="New Arrivals" href="#shop">New Arrivals</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="font-bold text-lg tracking-wide">Help</h3>
+<div class="flex flex-col gap-3 text-gray-300 text-sm font-medium">
+<a class="hover:text-primary transition-colors" data-action="open-help" data-help="shipping" href="#">Shipping &amp; Returns</a>
+<a class="hover:text-primary transition-colors" data-action="open-help" data-help="size" href="#">Size Guide</a>
+<a class="hover:text-primary transition-colors" data-action="open-help" data-help="faq" href="#">FAQ</a>
+<a class="hover:text-primary transition-colors" data-action="open-help" data-help="track" href="#">Track Order</a>
+</div>
+</div>
+<div class="flex flex-col gap-6" id="contact">
+<h3 class="font-bold text-lg tracking-wide">Contact</h3>
+<div class="flex flex-col gap-3 text-gray-300 text-sm font-medium">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+<span>woof@shakewagroll.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span>123 Puppy Lane, Dogville</span>
+</div>
+</div>
+<div class="flex gap-4 mt-2">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" data-action="open-external" data-external="twitter" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" data-action="open-external" data-external="instagram" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-700 pt-8 text-center text-gray-500 text-sm font-medium">
+<p>© 2023 Shake Wag &amp; Roll. All rights reserved.</p>
+</div>
+</footer>
+
+<script>
+(() => {
+  const storageKey = "swr_prototype_state_v1";
+
+  const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+
+  const slugify = (value) =>
+    String(value || "")
+      .toLowerCase()
+      .trim()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+  const parsePrice = (value) => {
+    const num = Number(String(value || "").replace(/[^0-9.]+/g, ""));
+    return Number.isFinite(num) ? num : 0;
+  };
+
+  const loadState = () => {
+    try {
+      const raw = localStorage.getItem(storageKey);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== "object") return null;
+      return parsed;
+    } catch {
+      return null;
+    }
+  };
+
+  const saveState = (next) => {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(next));
+    } catch {}
+  };
+
+  const defaultState = {
+    cart: { items: {} },
+    shop: {
+      query: "",
+      category: "All",
+      sort: "featured",
+      page: 1,
+      perPage: 8,
+    },
+  };
+
+  const deepClone = (value) => {
+    if (typeof structuredClone === "function") return structuredClone(value);
+    return JSON.parse(JSON.stringify(value));
+  };
+
+  const state = (() => {
+    const loaded = loadState();
+    if (!loaded) return deepClone(defaultState);
+    const merged = deepClone(defaultState);
+    if (loaded.cart && loaded.cart.items && typeof loaded.cart.items === "object") merged.cart.items = loaded.cart.items;
+    if (loaded.shop && typeof loaded.shop === "object") merged.shop = { ...merged.shop, ...loaded.shop };
+    return merged;
+  })();
+
+  const persist = () => saveState(state);
+
+  const qs = (sel, root = document) => root.querySelector(sel);
+  const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  const cartCountEl = qs("[data-cart-count]");
+
+  const computeCartCount = () =>
+    Object.values(state.cart.items).reduce((sum, qty) => sum + (Number.isFinite(qty) ? qty : 0), 0);
+
+  const updateCartCount = () => {
+    if (!cartCountEl) return;
+    cartCountEl.textContent = `Cart (${computeCartCount()})`;
+  };
+
+  const ensureOverlays = () => {
+    if (qs("#swr-toast-root")) return;
+
+    const toastRoot = document.createElement("div");
+    toastRoot.id = "swr-toast-root";
+    toastRoot.className = "fixed bottom-6 right-6 z-[80] pointer-events-none space-y-2";
+    document.body.appendChild(toastRoot);
+
+    const modalRoot = document.createElement("div");
+    modalRoot.id = "swr-modal-root";
+    modalRoot.className = "fixed inset-0 z-[60] hidden";
+    modalRoot.innerHTML = `
+      <div data-swr-overlay class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-150"></div>
+      <div class="relative w-full h-full flex items-center justify-center p-4 md:p-8">
+        <div data-swr-modal class="w-full max-w-4xl max-h-[calc(100vh-3rem)] md:max-h-[calc(100vh-4rem)] bg-white rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-150 translate-y-2 opacity-0 flex flex-col">
+          <div class="px-6 py-5 border-b border-[#f5f3f0] flex items-center justify-between">
+            <div class="text-[#181511] text-lg font-extrabold" data-swr-modal-title></div>
+            <button class="flex items-center justify-center rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-[#181511] transition-colors" data-action="close-overlay" title="Close">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+          </div>
+          <div class="p-6 flex-1 overflow-auto hide-scroll" data-swr-modal-body></div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modalRoot);
+
+    const drawerRoot = document.createElement("div");
+    drawerRoot.id = "swr-drawer-root";
+    drawerRoot.className = "fixed inset-0 z-[70] hidden";
+    drawerRoot.innerHTML = `
+      <div data-swr-overlay class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-150"></div>
+      <div data-swr-drawer class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-200 flex flex-col">
+        <div class="px-6 py-5 border-b border-[#f5f3f0] flex items-center justify-between">
+          <div class="text-[#181511] text-lg font-extrabold" data-swr-drawer-title></div>
+          <button class="flex items-center justify-center rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-[#181511] transition-colors" data-action="close-overlay" title="Close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="flex-1 overflow-auto hide-scroll" data-swr-drawer-body></div>
+        <div class="border-t border-[#f5f3f0] p-6" data-swr-drawer-footer></div>
+      </div>
+    `;
+    document.body.appendChild(drawerRoot);
+  };
+
+  const toast = (message, tone = "neutral") => {
+    ensureOverlays();
+    const root = qs("#swr-toast-root");
+    if (!root) return;
+    const el = document.createElement("div");
+    const toneClass =
+      tone === "success"
+        ? "bg-black"
+        : tone === "error"
+          ? "bg-black"
+          : "bg-black";
+    el.className = `pointer-events-auto ${toneClass} text-white rounded-xl shadow-xl px-5 py-4 max-w-sm`;
+    el.innerHTML = `<div class="text-sm font-bold tracking-wide">${message}</div>`;
+    root.appendChild(el);
+    window.setTimeout(() => {
+      el.style.opacity = "0";
+      el.style.transition = "opacity 200ms ease";
+      window.setTimeout(() => el.remove(), 220);
+    }, 2200);
+  };
+
+  const overlay = (() => {
+    let active = null;
+    let lastFocused = null;
+
+    const lockScroll = (enabled) => {
+      document.body.classList.toggle("overflow-hidden", enabled);
+    };
+
+    const focusFirst = (container) => {
+      const focusable = qsa(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        container
+      ).filter((el) => !el.hasAttribute("disabled") && !el.getAttribute("aria-hidden"));
+      if (focusable.length) focusable[0].focus({ preventScroll: true });
+    };
+
+    const trap = (e) => {
+      if (!active) return;
+      if (e.key !== "Tab") return;
+      const container = active.type === "modal" ? qs("[data-swr-modal]", active.root) : qs("[data-swr-drawer]", active.root);
+      if (!container) return;
+      const focusable = qsa(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        container
+      ).filter((el) => !el.hasAttribute("disabled") && el.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    const close = () => {
+      if (!active) return;
+      const root = active.root;
+      const overlayEl = qs("[data-swr-overlay]", root);
+      overlayEl?.classList.remove("opacity-100");
+      overlayEl?.classList.add("opacity-0");
+
+      if (active.type === "modal") {
+        const modalEl = qs("[data-swr-modal]", root);
+        modalEl?.classList.remove("translate-y-0", "opacity-100");
+        modalEl?.classList.add("translate-y-2", "opacity-0");
+      } else {
+        const drawerEl = qs("[data-swr-drawer]", root);
+        drawerEl?.classList.remove("translate-x-0");
+        drawerEl?.classList.add("translate-x-full");
+      }
+
+      window.setTimeout(() => {
+        root.classList.add("hidden");
+      }, 180);
+
+      lockScroll(false);
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("keydown", trap);
+      active = null;
+
+      if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus({ preventScroll: true });
+      lastFocused = null;
+    };
+
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") close();
+    };
+
+    const openModal = ({ title, bodyHtml, onMount }) => {
+      ensureOverlays();
+      lastFocused = document.activeElement;
+      const root = qs("#swr-modal-root");
+      const overlayEl = qs("[data-swr-overlay]", root);
+      const modalEl = qs("[data-swr-modal]", root);
+      const titleEl = qs("[data-swr-modal-title]", root);
+      const bodyEl = qs("[data-swr-modal-body]", root);
+
+      titleEl.textContent = title;
+      bodyEl.innerHTML = bodyHtml;
+
+      root.classList.remove("hidden");
+      lockScroll(true);
+
+      window.requestAnimationFrame(() => {
+        overlayEl.classList.remove("opacity-0");
+        overlayEl.classList.add("opacity-100");
+        modalEl.classList.remove("translate-y-2", "opacity-0");
+        modalEl.classList.add("translate-y-0", "opacity-100");
+      });
+
+      active = { type: "modal", root };
+      document.addEventListener("keydown", onKeyDown);
+      document.addEventListener("keydown", trap);
+      overlayEl.addEventListener(
+        "click",
+        () => {
+          close();
+        },
+        { once: true }
+      );
+
+      if (typeof onMount === "function") onMount({ root });
+      window.setTimeout(() => focusFirst(modalEl), 10);
+    };
+
+    const openDrawer = ({ title, bodyHtml, footerHtml, onMount }) => {
+      ensureOverlays();
+      lastFocused = document.activeElement;
+      const root = qs("#swr-drawer-root");
+      const overlayEl = qs("[data-swr-overlay]", root);
+      const drawerEl = qs("[data-swr-drawer]", root);
+      const titleEl = qs("[data-swr-drawer-title]", root);
+      const bodyEl = qs("[data-swr-drawer-body]", root);
+      const footerEl = qs("[data-swr-drawer-footer]", root);
+
+      titleEl.textContent = title;
+      bodyEl.innerHTML = bodyHtml;
+      footerEl.innerHTML = footerHtml || "";
+
+      root.classList.remove("hidden");
+      lockScroll(true);
+
+      window.requestAnimationFrame(() => {
+        overlayEl.classList.remove("opacity-0");
+        overlayEl.classList.add("opacity-100");
+        drawerEl.classList.remove("translate-x-full");
+        drawerEl.classList.add("translate-x-0");
+      });
+
+      active = { type: "drawer", root };
+      document.addEventListener("keydown", onKeyDown);
+      document.addEventListener("keydown", trap);
+      overlayEl.addEventListener(
+        "click",
+        () => {
+          close();
+        },
+        { once: true }
+      );
+
+      if (typeof onMount === "function") onMount({ root });
+      window.setTimeout(() => focusFirst(drawerEl), 10);
+    };
+
+    return { openModal, openDrawer, close };
+  })();
+
+  const bootstrapCatalog = () => {
+    const bestSellerCards = qsa("#shop .grid > div");
+    const base = bestSellerCards
+      .map((card) => {
+        const nameEl = qs("h3", card);
+        const priceEl = qs("span.text-xl", card);
+        const imageEl = qs("div.absolute.inset-0.bg-cover", card);
+        if (!nameEl || !priceEl || !imageEl) return null;
+        const name = nameEl.textContent.trim();
+        const price = parsePrice(priceEl.textContent);
+        const style = imageEl.getAttribute("style") || "";
+        const match = style.match(/url\(["']?(.+?)["']?\)/i);
+        const imageUrl = match ? match[1] : "";
+        const id = slugify(name);
+        const category =
+          /treat/i.test(name) ? "Treats" : /collar/i.test(name) ? "Accessories" : /toy|play/i.test(name) ? "Toys" : "Accessories";
+        const tagEl = qsa("div.absolute.top-3.left-3", card)[0];
+        const badge = tagEl ? tagEl.textContent.trim() : "";
+        const inStock = true;
+
+        const addBtn = qs('button[data-action="add-to-cart"]', card);
+        if (addBtn) addBtn.dataset.productId = id;
+
+        return { id, name, price, imageUrl, category, badge, inStock };
+      })
+      .filter(Boolean);
+
+    const clones = [];
+    const seedNames = [
+      ["Squeaky Plush Fox", "Toys"],
+      ["Dental Chew Sticks", "Treats"],
+      ["Reflective Leash", "Accessories"],
+      ["Puppy Training Treat Mix", "Treats"],
+      ["Tug-of-War Ring", "Toys"],
+      ["Adventure Harness", "Accessories"],
+      ["Freeze-Dried Chicken Bites", "Treats"],
+      ["Waterproof Collar", "Accessories"],
+      ["Fetch Ball Duo", "Toys"],
+      ["Pumpkin Biscuit Treats", "Treats"],
+      ["Travel Bowl Set", "Accessories"],
+      ["Crinkle Bunny Toy", "Toys"],
+    ];
+
+    const images = base.map((p) => p.imageUrl).filter(Boolean);
+    seedNames.forEach(([name, category], idx) => {
+      const id = slugify(name);
+      const price = [12.99, 9.5, 19.0, 14.25, 16.0, 28.0, 13.75, 17.5, 11.0, 10.5, 15.0, 13.0][idx] || 14.99;
+      const imageUrl = images[idx % images.length] || "";
+      const badge = idx % 5 === 0 ? "NEW" : "";
+      const inStock = idx % 11 !== 0;
+      clones.push({ id, name, price, imageUrl, category, badge, inStock });
+    });
+
+    const arrivals = [
+      { name: "Winter Cozy Sweater", category: "New Arrivals", price: 24.0 },
+      { name: "Holiday Treat Sampler", category: "New Arrivals", price: 18.5 },
+      { name: "Limited Edition Rope Toy", category: "New Arrivals", price: 16.99 },
+      { name: "New Arrival Collar Set", category: "New Arrivals", price: 29.0 },
+    ].map((p, idx) => ({
+      id: slugify(p.name),
+      name: p.name,
+      category: p.category,
+      price: p.price,
+      imageUrl: images[(idx + 2) % images.length] || "",
+      badge: "NEW",
+      inStock: true,
+    }));
+
+    const catalog = [...base, ...clones, ...arrivals];
+    const byId = new Map(catalog.map((p) => [p.id, p]));
+    return { catalog, byId };
+  };
+
+  const { catalog, byId } = bootstrapCatalog();
+
+  const addToCart = async (productId, qty = 1) => {
+    const product = byId.get(productId);
+    if (!product) return { ok: false, error: "Product not found." };
+    if (!product.inStock) return { ok: false, error: "Out of stock." };
+    await new Promise((r) => window.setTimeout(r, 350));
+    const current = state.cart.items[productId] || 0;
+    state.cart.items[productId] = current + qty;
+    persist();
+    updateCartCount();
+    return { ok: true };
+  };
+
+  const removeFromCart = (productId) => {
+    delete state.cart.items[productId];
+    persist();
+    updateCartCount();
+  };
+
+  const setQty = (productId, qty) => {
+    const nextQty = Math.max(0, Math.min(99, qty));
+    if (nextQty === 0) {
+      removeFromCart(productId);
+      return;
+    }
+    state.cart.items[productId] = nextQty;
+    persist();
+    updateCartCount();
+  };
+
+  const cartTotals = () => {
+    const subtotal = Object.entries(state.cart.items).reduce((sum, [id, qty]) => {
+      const p = byId.get(id);
+      if (!p) return sum;
+      return sum + p.price * qty;
+    }, 0);
+    const shipping = subtotal >= 50 || subtotal === 0 ? 0 : 5.99;
+    const tax = subtotal * 0.0825;
+    const total = subtotal + shipping + tax;
+    return { subtotal, shipping, tax, total };
+  };
+
+  const renderCartDrawer = () => {
+    const entries = Object.entries(state.cart.items).map(([id, qty]) => ({ product: byId.get(id), qty })).filter((x) => x.product);
+    const { subtotal, shipping, tax, total } = cartTotals();
+
+    const empty = `
+      <div class="p-8">
+        <div class="text-[#181511] text-lg font-extrabold">Your cart is empty</div>
+        <div class="text-gray-500 font-medium mt-2">Add something your pup will love.</div>
+        <div class="mt-6">
+          <button class="h-12 px-6 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors" data-action="open-shop">Shop Best Sellers</button>
+        </div>
+      </div>
+    `;
+
+    const list = `
+      <div class="p-6 space-y-5">
+        ${entries
+          .map(({ product, qty }) => {
+            const image = product.imageUrl
+              ? `<div class="w-16 h-16 rounded-xl bg-gray-100 bg-cover bg-center flex-shrink-0" style="background-image:url('${product.imageUrl}')"></div>`
+              : `<div class="w-16 h-16 rounded-xl bg-gray-100 flex-shrink-0"></div>`;
+            return `
+              <div class="flex items-center gap-4">
+                ${image}
+                <div class="flex-1 min-w-0">
+                  <div class="text-[#181511] font-bold truncate">${product.name}</div>
+                  <div class="text-gray-500 text-sm font-medium mt-1">${money.format(product.price)}</div>
+                  <div class="mt-3 flex items-center gap-2">
+                    <button class="h-9 w-9 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center" data-action="cart-qty" data-product-id="${product.id}" data-delta="-1" title="Decrease quantity">
+                      <span class="material-symbols-outlined text-base">remove</span>
+                    </button>
+                    <div class="w-10 text-center text-sm font-extrabold text-[#181511]">${qty}</div>
+                    <button class="h-9 w-9 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center" data-action="cart-qty" data-product-id="${product.id}" data-delta="1" title="Increase quantity">
+                      <span class="material-symbols-outlined text-base">add</span>
+                    </button>
+                    <button class="ml-auto text-sm font-bold text-gray-500 hover:text-primary transition-colors" data-action="cart-remove" data-product-id="${product.id}">Remove</button>
+                  </div>
+                </div>
+              </div>
+            `;
+          })
+          .join("")}
+      </div>
+    `;
+
+    const footer = `
+      <div class="space-y-4">
+        <div class="space-y-2 text-sm font-medium text-gray-600">
+          <div class="flex items-center justify-between"><span>Subtotal</span><span class="text-[#181511] font-extrabold">${money.format(subtotal)}</span></div>
+          <div class="flex items-center justify-between"><span>Shipping</span><span class="text-[#181511] font-extrabold">${shipping === 0 ? "Free" : money.format(shipping)}</span></div>
+          <div class="flex items-center justify-between"><span>Estimated Tax</span><span class="text-[#181511] font-extrabold">${money.format(tax)}</span></div>
+        </div>
+        <div class="flex items-center justify-between text-[#181511]">
+          <span class="text-sm font-bold uppercase tracking-wider">Total</span>
+          <span class="text-xl font-black">${money.format(total)}</span>
+        </div>
+        <button class="w-full h-12 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" data-action="checkout" ${
+          entries.length ? "" : "disabled"
+        }>Checkout</button>
+        <button class="w-full h-12 bg-white border-2 border-black text-black rounded-lg font-bold hover:bg-gray-50 transition-colors" data-action="open-shop">Continue Shopping</button>
+      </div>
+    `;
+
+    overlay.openDrawer({
+      title: "Your Cart",
+      bodyHtml: entries.length ? list : empty,
+      footerHtml: footer,
+    });
+  };
+
+  const sortProducts = (items) => {
+    const sort = state.shop.sort;
+    const next = [...items];
+    if (sort === "price_asc") next.sort((a, b) => a.price - b.price);
+    if (sort === "price_desc") next.sort((a, b) => b.price - a.price);
+    if (sort === "name_asc") next.sort((a, b) => a.name.localeCompare(b.name));
+    return next;
+  };
+
+  const filteredProducts = () => {
+    const query = state.shop.query.trim().toLowerCase();
+    const category = state.shop.category;
+    let items = catalog;
+    if (category && category !== "All") items = items.filter((p) => p.category === category);
+    if (query) items = items.filter((p) => p.name.toLowerCase().includes(query));
+    return sortProducts(items);
+  };
+
+  const renderShopBody = ({ loading = false } = {}) => {
+    const categories = ["All", "Toys", "Treats", "Accessories", "New Arrivals"];
+    const items = filteredProducts();
+    const totalPages = Math.max(1, Math.ceil(items.length / state.shop.perPage));
+    state.shop.page = Math.max(1, Math.min(state.shop.page, totalPages));
+    const start = (state.shop.page - 1) * state.shop.perPage;
+    const pageItems = items.slice(start, start + state.shop.perPage);
+
+    const tabs = categories
+      .map((c) => {
+        const active = c === state.shop.category;
+        const cls = active
+          ? "bg-black text-white"
+          : "bg-white text-[#181511] border border-[#f5f3f0] hover:bg-gray-50";
+        return `<button class="h-10 px-4 rounded-full text-sm font-bold transition-colors ${cls}" data-action="shop-category" data-category="${c}">${c}</button>`;
+      })
+      .join("");
+
+    const grid = loading
+      ? `<div class="py-14 text-center text-gray-500 font-medium">Loading products…</div>`
+      : pageItems.length
+        ? `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            ${pageItems
+              .map((p) => {
+                const img = p.imageUrl
+                  ? `<div class="relative overflow-hidden rounded-xl bg-gray-100 aspect-square mb-4"><div class="absolute inset-0 bg-cover bg-center" style="background-image:url('${p.imageUrl}')"></div>${
+                      p.badge
+                        ? `<div class="absolute top-3 left-3 ${p.badge === "HOT" ? "bg-primary" : "bg-black"} text-white text-xs font-bold px-2 py-1 rounded">${p.badge}</div>`
+                        : ""
+                    }</div>`
+                  : `<div class="relative overflow-hidden rounded-xl bg-gray-100 aspect-square mb-4"></div>`;
+                const disabled = p.inStock ? "" : "disabled";
+                const label = p.inStock ? "Add to Cart" : "Out of Stock";
+                return `
+                  <div class="group bg-white rounded-2xl p-3 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
+                    ${img}
+                    <div class="px-2 pb-2">
+                      <h3 class="text-lg font-bold text-[#181511] mb-1">${p.name}</h3>
+                      <div class="flex items-center justify-between mt-3">
+                        <span class="text-xl font-extrabold text-[#181511]">${money.format(p.price)}</span>
+                        <button class="bg-black text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors disabled:opacity-50 disabled:hover:bg-black" data-action="add-to-cart" data-product-id="${p.id}" title="${label}" ${disabled}>
+                          <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                `;
+              })
+              .join("")}
+          </div>`
+        : `<div class="py-14 text-center">
+            <div class="text-[#181511] text-lg font-extrabold">No results found</div>
+            <div class="text-gray-500 font-medium mt-2">Try a different search or category.</div>
+          </div>`;
+
+    const paging = `
+      <div class="mt-8 flex items-center justify-between gap-4">
+        <button class="h-12 px-5 bg-white border-2 border-black text-black rounded-lg font-bold hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" data-action="shop-page" data-direction="prev" ${
+          state.shop.page <= 1 ? "disabled" : ""
+        }>Previous</button>
+        <div class="text-sm font-bold text-gray-500">Page ${state.shop.page} of ${totalPages}</div>
+        <button class="h-12 px-5 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" data-action="shop-page" data-direction="next" ${
+          state.shop.page >= totalPages ? "disabled" : ""
+        }>Next</button>
+      </div>
+    `;
+
+    const body = `
+      <div class="space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center gap-4">
+          <div class="flex-1">
+            <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Search products" type="search" value="${state.shop.query.replace(/"/g, "&quot;")}" data-action="shop-search"/>
+          </div>
+          <div class="w-full md:w-64">
+            <select class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary font-bold text-sm" data-action="shop-sort">
+              <option value="featured" ${state.shop.sort === "featured" ? "selected" : ""}>Featured</option>
+              <option value="price_asc" ${state.shop.sort === "price_asc" ? "selected" : ""}>Price: Low to High</option>
+              <option value="price_desc" ${state.shop.sort === "price_desc" ? "selected" : ""}>Price: High to Low</option>
+              <option value="name_asc" ${state.shop.sort === "name_asc" ? "selected" : ""}>Name: A–Z</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2">${tabs}</div>
+        ${grid}
+        ${paging}
+      </div>
+    `;
+
+    return body;
+  };
+
+  const openShop = ({ focusSearch = false } = {}) => {
+    overlay.openModal({
+      title: "Shop",
+      bodyHtml: renderShopBody({ loading: true }),
+      onMount: ({ root }) => {
+        const bodyEl = qs("[data-swr-modal-body]", root);
+        window.setTimeout(() => {
+          bodyEl.innerHTML = renderShopBody({ loading: false });
+          if (focusSearch) {
+            const input = qs('input[data-action="shop-search"]', bodyEl);
+            input?.focus({ preventScroll: true });
+          }
+        }, 350);
+      },
+    });
+  };
+
+  const openStory = () => {
+    const body = `
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4">
+          <div class="text-[#181511] text-2xl font-black tracking-tight">Our Story</div>
+          <div class="text-gray-600 text-lg leading-relaxed font-medium">
+            Shake Wag &amp; Roll started with one simple goal: create pet essentials that feel premium, look great, and hold up to real play.
+            Every product in the collection is selected with safety, durability, and tail-wagging joy in mind.
+          </div>
+          <div class="flex gap-3 pt-2">
+            <button class="h-12 px-6 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors" data-action="open-shop">Browse Products</button>
+            <button class="h-12 px-6 bg-white border-2 border-black text-black rounded-lg font-bold hover:bg-gray-50 transition-colors" data-action="open-contact">Contact Us</button>
+          </div>
+        </div>
+        <div class="bg-[#f8f7f5] rounded-2xl p-6 border border-[#f5f3f0]">
+          <div class="text-[#181511] font-extrabold">What to expect in the prototype</div>
+          <div class="mt-3 space-y-3 text-gray-600 text-sm font-medium">
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Working shop search, filters, sorting, and pagination</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Cart drawer with checkout flow and realistic loading states</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span><span>Help center modals (FAQ, size guide, shipping, order tracking)</span></div>
+          </div>
+        </div>
+      </div>
+    `;
+    overlay.openModal({ title: "About Shake Wag & Roll", bodyHtml: body });
+  };
+
+  const openHelp = (type) => {
+    const templates = {
+      shipping: {
+        title: "Shipping & Returns",
+        body: `
+          <div class="space-y-6">
+            <div class="bg-[#f8f7f5] rounded-2xl p-6 border border-[#f5f3f0]">
+              <div class="text-[#181511] text-lg font-extrabold">Shipping</div>
+              <div class="text-gray-600 font-medium mt-2 leading-relaxed">
+                Orders ship in 1–2 business days. Free shipping on orders over $50. Standard shipping typically arrives in 3–5 business days.
+              </div>
+            </div>
+            <div class="bg-[#f8f7f5] rounded-2xl p-6 border border-[#f5f3f0]">
+              <div class="text-[#181511] text-lg font-extrabold">Returns</div>
+              <div class="text-gray-600 font-medium mt-2 leading-relaxed">
+                Return unused items within 30 days. Treats are final sale. We'll make it right if anything arrives damaged.
+              </div>
+            </div>
+          </div>
+        `,
+      },
+      size: {
+        title: "Size Guide",
+        body: `
+          <div class="space-y-6">
+            <div class="flex gap-2">
+              <button class="h-10 px-4 rounded-full text-sm font-bold transition-colors bg-black text-white" data-action="size-tab" data-tab="collars">Collars</button>
+              <button class="h-10 px-4 rounded-full text-sm font-bold transition-colors bg-white text-[#181511] border border-[#f5f3f0] hover:bg-gray-50" data-action="size-tab" data-tab="apparel">Apparel</button>
+            </div>
+            <div class="bg-white rounded-2xl p-6 border border-[#f5f3f0]" data-size-panel="collars">
+              <div class="text-[#181511] text-lg font-extrabold">Collar Sizing</div>
+              <div class="mt-3 space-y-2 text-gray-600 text-sm font-medium">
+                <div class="flex items-center justify-between"><span>Small</span><span>10–14 in</span></div>
+                <div class="flex items-center justify-between"><span>Medium</span><span>14–18 in</span></div>
+                <div class="flex items-center justify-between"><span>Large</span><span>18–22 in</span></div>
+              </div>
+            </div>
+            <div class="bg-white rounded-2xl p-6 border border-[#f5f3f0] hidden" data-size-panel="apparel">
+              <div class="text-[#181511] text-lg font-extrabold">Apparel Sizing</div>
+              <div class="mt-3 space-y-2 text-gray-600 text-sm font-medium">
+                <div class="flex items-center justify-between"><span>Chest</span><span>Measure widest point</span></div>
+                <div class="flex items-center justify-between"><span>Back</span><span>Base of neck to tail</span></div>
+                <div class="flex items-center justify-between"><span>Fit</span><span>Snug with 2-finger space</span></div>
+              </div>
+            </div>
+          </div>
+        `,
+      },
+      faq: {
+        title: "FAQ",
+        body: `
+          <div class="space-y-4">
+            ${[
+              ["Are products pet safe?", "Yes. All materials in the prototype catalog are presented as non-toxic and pet-safe."],
+              ["How do I track my order?", "Use the Track Order tool to see realistic status updates."],
+              ["Do you offer subscription boxes?", "Not in this prototype, but the newsletter flow is wired for future drops."],
+              ["Can I change my address after ordering?", "In the prototype, contact support and we will confirm an update request."],
+            ]
+              .map(
+                ([q, a], idx) => `
+                  <div class="bg-white rounded-2xl border border-[#f5f3f0] overflow-hidden">
+                    <button class="w-full px-6 py-5 flex items-center justify-between text-left" data-action="accordion" data-accordion-id="faq_${idx}">
+                      <span class="text-[#181511] font-extrabold">${q}</span>
+                      <span class="material-symbols-outlined text-gray-400">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-5 text-gray-600 font-medium leading-relaxed hidden" data-accordion-panel="faq_${idx}">${a}</div>
+                  </div>
+                `
+              )
+              .join("")}
+          </div>
+        `,
+      },
+      track: {
+        title: "Track Order",
+        body: `
+          <form class="space-y-4" data-action="track-form">
+            <div>
+              <label class="block text-sm font-bold text-gray-600 mb-2">Order Number</label>
+              <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="e.g. SWR-10248" required name="order"/>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-600 mb-2">Email</label>
+              <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="you@domain.com" type="email" required name="email"/>
+            </div>
+            <button class="w-full h-12 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors" type="submit">Check Status</button>
+            <div class="hidden bg-[#f8f7f5] rounded-2xl p-6 border border-[#f5f3f0]" data-track-result></div>
+          </form>
+        `,
+      },
+    };
+
+    const t = templates[type] || templates.faq;
+    overlay.openModal({ title: t.title, bodyHtml: t.body });
+  };
+
+  const openContact = () => {
+    overlay.openModal({
+      title: "Contact",
+      bodyHtml: `
+        <form class="space-y-4" data-action="contact-form">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-bold text-gray-600 mb-2">Name</label>
+              <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your name" required name="name"/>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-600 mb-2">Email</label>
+              <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="you@domain.com" type="email" required name="email"/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-gray-600 mb-2">Message</label>
+            <textarea class="min-h-[140px] w-full px-4 py-3 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="How can we help?" required name="message"></textarea>
+          </div>
+          <button class="w-full h-12 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors" type="submit">Send Message</button>
+          <div class="hidden bg-[#f8f7f5] rounded-2xl p-6 border border-[#f5f3f0] text-gray-600 font-medium" data-contact-result></div>
+        </form>
+      `,
+    });
+  };
+
+  const openCheckout = () => {
+    const { subtotal, shipping, tax, total } = cartTotals();
+    overlay.openModal({
+      title: "Checkout",
+      bodyHtml: `
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <form class="space-y-4" data-action="checkout-form">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-bold text-gray-600 mb-2">First Name</label>
+                <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" required name="firstName"/>
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-gray-600 mb-2">Last Name</label>
+                <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" required name="lastName"/>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-600 mb-2">Email</label>
+              <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" type="email" required name="email"/>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-600 mb-2">Shipping Address</label>
+              <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Street address" required name="address1"/>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-bold text-gray-600 mb-2">City</label>
+                <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" required name="city"/>
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-gray-600 mb-2">ZIP</label>
+                <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" required name="zip" inputmode="numeric"/>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="md:col-span-2">
+                <label class="block text-sm font-bold text-gray-600 mb-2">Card Number</label>
+                <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="4242 4242 4242 4242" required name="card"/>
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-gray-600 mb-2">CVC</label>
+                <input class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="123" required name="cvc" inputmode="numeric"/>
+              </div>
+            </div>
+            <button class="w-full h-12 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors" type="submit">Place Order</button>
+            <div class="hidden bg-[#f8f7f5] rounded-2xl p-6 border border-[#f5f3f0] text-gray-600 font-medium" data-checkout-result></div>
+          </form>
+          <div class="bg-[#f8f7f5] rounded-2xl p-6 border border-[#f5f3f0]">
+            <div class="text-[#181511] text-lg font-extrabold">Order Summary</div>
+            <div class="mt-4 space-y-2 text-sm font-medium text-gray-600">
+              <div class="flex items-center justify-between"><span>Subtotal</span><span class="text-[#181511] font-extrabold">${money.format(subtotal)}</span></div>
+              <div class="flex items-center justify-between"><span>Shipping</span><span class="text-[#181511] font-extrabold">${shipping === 0 ? "Free" : money.format(shipping)}</span></div>
+              <div class="flex items-center justify-between"><span>Estimated Tax</span><span class="text-[#181511] font-extrabold">${money.format(tax)}</span></div>
+            </div>
+            <div class="mt-5 pt-5 border-t border-[#f5f3f0] flex items-center justify-between text-[#181511]">
+              <span class="text-sm font-bold uppercase tracking-wider">Total</span>
+              <span class="text-2xl font-black">${money.format(total)}</span>
+            </div>
+          </div>
+        </div>
+      `,
+    });
+  };
+
+  const wireNewsletter = () => {
+    const form = qs('form[class*="lg:min-w"]') || qs("main form");
+    if (!form) return;
+    const input = qs('input[type="email"]', form);
+    const button = qs('button[type="submit"], button:not([type])', form);
+    const note = form.parentElement?.querySelector("p");
+    if (!input || !button) return;
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = input.value.trim();
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!isValid) {
+        if (note) note.textContent = "Please enter a valid email address.";
+        input.focus({ preventScroll: true });
+        return;
+      }
+
+      const originalText = button.textContent;
+      button.disabled = true;
+      input.disabled = true;
+      button.textContent = "Subscribing…";
+      if (note) note.textContent = "Submitting your request…";
+      await new Promise((r) => window.setTimeout(r, 750));
+      const ok = Math.random() > 0.15;
+
+      if (ok) {
+        if (note) note.textContent = "You're in! Welcome to the pack.";
+        input.value = "";
+        toast("Subscription confirmed", "success");
+      } else {
+        if (note) note.textContent = "Something went wrong. Please try again.";
+        toast("Subscription failed", "error");
+      }
+
+      button.disabled = false;
+      input.disabled = false;
+      button.textContent = originalText;
+    });
+  };
+
+  const smoothScrollToHash = (hash) => {
+    const id = (hash || "").replace(/^#/, "");
+    if (!id) return false;
+    const el = document.getElementById(id);
+    if (!el) return false;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    return true;
+  };
+
+  const setShopCategoryFromLink = (target) => {
+    const category = target?.dataset?.category;
+    if (!category) return;
+    state.shop.category = category;
+    state.shop.page = 1;
+    persist();
+  };
+
+  const handleAction = async (actionEl) => {
+    const action = actionEl.dataset.action;
+    if (action === "open-menu") {
+      const cartCount = computeCartCount();
+      overlay.openDrawer({
+        title: "Menu",
+        bodyHtml: `
+          <div class="p-6 space-y-6">
+            <div class="space-y-4">
+              <button class="w-full text-left text-[#181511] text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" data-action="menu-scroll" data-hash="#home">Home</button>
+              <button class="w-full text-left text-[#181511] text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" data-action="menu-scroll" data-hash="#shop">Shop</button>
+              <button class="w-full text-left text-[#181511] text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" data-action="menu-scroll" data-hash="#about">About</button>
+              <button class="w-full text-left text-[#181511] text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors" data-action="menu-contact">Contact</button>
+            </div>
+            <div class="border-t border-[#f5f3f0] pt-6 space-y-3">
+              <button class="w-full flex items-center justify-center rounded-full h-12 bg-gray-100 hover:bg-gray-200 text-[#181511] transition-colors" data-action="menu-search" title="Search">
+                <span class="material-symbols-outlined">search</span>
+                <span class="ml-2 text-sm font-bold uppercase tracking-wider">Search</span>
+              </button>
+              <button class="w-full flex items-center justify-center rounded-full h-12 px-5 bg-black hover:bg-gray-800 text-white text-sm font-bold transition-colors" data-action="menu-cart" title="Open cart">
+                <span class="material-symbols-outlined text-lg mr-2">shopping_bag</span>
+                <span>Cart (${cartCount})</span>
+              </button>
+            </div>
+          </div>
+        `,
+        footerHtml: "",
+      });
+      return;
+    }
+    if (action === "menu-scroll") {
+      const hash = actionEl.dataset.hash || "";
+      overlay.close();
+      window.setTimeout(() => {
+        smoothScrollToHash(hash);
+      }, 50);
+      return;
+    }
+    if (action === "menu-contact") {
+      overlay.close();
+      window.setTimeout(() => {
+        openContact();
+      }, 50);
+      return;
+    }
+    if (action === "menu-search") {
+      overlay.close();
+      window.setTimeout(() => {
+        state.shop.page = 1;
+        persist();
+        openShop({ focusSearch: true });
+      }, 50);
+      return;
+    }
+    if (action === "menu-cart") {
+      overlay.close();
+      window.setTimeout(() => {
+        renderCartDrawer();
+      }, 50);
+      return;
+    }
+    if (action === "open-search") {
+      state.shop.page = 1;
+      persist();
+      openShop({ focusSearch: true });
+      return;
+    }
+    if (action === "open-shop") {
+      state.shop.page = 1;
+      persist();
+      openShop();
+      return;
+    }
+    if (action === "open-cart") {
+      renderCartDrawer();
+      return;
+    }
+    if (action === "learn-story") {
+      smoothScrollToHash("#about");
+      openStory();
+      return;
+    }
+    if (action === "open-help") {
+      openHelp(actionEl.dataset.help);
+      return;
+    }
+    if (action === "open-external") {
+      overlay.openModal({
+        title: "External Link",
+        bodyHtml: `
+          <div class="space-y-4">
+            <div class="text-gray-600 font-medium leading-relaxed">
+              This prototype keeps external links inside the demo environment. In production, this would open the official ${String(
+                actionEl.dataset.external || "social"
+              )} page.
+            </div>
+            <div class="flex gap-3">
+              <button class="h-12 px-6 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors" data-action="close-overlay">Close</button>
+            </div>
+          </div>
+        `,
+      });
+      return;
+    }
+    if (action === "open-contact") {
+      openContact();
+      return;
+    }
+    if (action === "add-to-cart") {
+      const productId = actionEl.dataset.productId;
+      if (!productId) return;
+      const icon = qs(".material-symbols-outlined", actionEl);
+      const originalIcon = icon?.textContent;
+      if (icon) icon.textContent = "progress_activity";
+      actionEl.disabled = true;
+      const result = await addToCart(productId, 1);
+      if (icon && originalIcon) icon.textContent = originalIcon;
+      actionEl.disabled = false;
+      if (result.ok) {
+        toast("Added to cart", "success");
+        updateCartCount();
+      } else {
+        toast(result.error || "Unable to add to cart", "error");
+      }
+      return;
+    }
+    if (action === "cart-remove") {
+      removeFromCart(actionEl.dataset.productId);
+      renderCartDrawer();
+      return;
+    }
+    if (action === "cart-qty") {
+      const id = actionEl.dataset.productId;
+      const delta = Number(actionEl.dataset.delta || "0");
+      const current = state.cart.items[id] || 0;
+      setQty(id, current + delta);
+      renderCartDrawer();
+      return;
+    }
+    if (action === "checkout") {
+      overlay.close();
+      openCheckout();
+      return;
+    }
+    if (action === "shop-category") {
+      state.shop.category = actionEl.dataset.category || "All";
+      state.shop.page = 1;
+      persist();
+      const bodyEl = qs("#swr-modal-root [data-swr-modal-body]");
+      if (bodyEl) bodyEl.innerHTML = renderShopBody();
+      return;
+    }
+    if (action === "shop-page") {
+      const dir = actionEl.dataset.direction;
+      const items = filteredProducts();
+      const totalPages = Math.max(1, Math.ceil(items.length / state.shop.perPage));
+      if (dir === "prev") state.shop.page = Math.max(1, state.shop.page - 1);
+      if (dir === "next") state.shop.page = Math.min(totalPages, state.shop.page + 1);
+      persist();
+      const bodyEl = qs("#swr-modal-root [data-swr-modal-body]");
+      if (bodyEl) bodyEl.innerHTML = renderShopBody();
+      return;
+    }
+    if (action === "shop-sort") {
+      const select = actionEl;
+      state.shop.sort = select.value;
+      state.shop.page = 1;
+      persist();
+      const bodyEl = qs("#swr-modal-root [data-swr-modal-body]");
+      if (bodyEl) bodyEl.innerHTML = renderShopBody();
+      return;
+    }
+    if (action === "accordion") {
+      const id = actionEl.dataset.accordionId;
+      const panel = qs(`[data-accordion-panel="${id}"]`);
+      if (!panel) return;
+      const isOpen = !panel.classList.contains("hidden");
+      panel.classList.toggle("hidden", isOpen);
+      const icon = qs(".material-symbols-outlined", actionEl);
+      if (icon) icon.textContent = isOpen ? "expand_more" : "expand_less";
+      return;
+    }
+    if (action === "size-tab") {
+      const tab = actionEl.dataset.tab;
+      const root = qs("#swr-modal-root");
+      if (!root) return;
+      qsa('[data-size-panel]', root).forEach((p) => {
+        p.classList.toggle("hidden", p.dataset.sizePanel !== tab);
+      });
+      qsa('button[data-action="size-tab"]', root).forEach((b) => {
+        const active = b.dataset.tab === tab;
+        b.className = `h-10 px-4 rounded-full text-sm font-bold transition-colors ${
+          active ? "bg-black text-white" : "bg-white text-[#181511] border border-[#f5f3f0] hover:bg-gray-50"
+        }`;
+      });
+      return;
+    }
+    if (action === "close-overlay") {
+      overlay.close();
+      return;
+    }
+  };
+
+  const wireGlobalEvents = () => {
+    document.addEventListener("click", (e) => {
+      const actionEl = e.target.closest("[data-action]");
+      if (actionEl) {
+        e.preventDefault();
+        handleAction(actionEl);
+        return;
+      }
+
+      const categoryLink = e.target.closest("a[data-category]");
+      if (categoryLink) {
+        e.preventDefault();
+        setShopCategoryFromLink(categoryLink);
+        openShop();
+        return;
+      }
+
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      const href = a.getAttribute("href");
+      if (!href || href === "#") return;
+      const did = smoothScrollToHash(href);
+      if (did) e.preventDefault();
+    });
+
+    document.addEventListener("input", (e) => {
+      const el = e.target;
+      if (!(el instanceof HTMLElement)) return;
+      if (el.matches('input[data-action="shop-search"]')) {
+        state.shop.query = el.value;
+        state.shop.page = 1;
+        persist();
+        const bodyEl = qs("#swr-modal-root [data-swr-modal-body]");
+        if (bodyEl) bodyEl.innerHTML = renderShopBody();
+      }
+    });
+
+    document.addEventListener("submit", async (e) => {
+      const form = e.target;
+      if (!(form instanceof HTMLFormElement)) return;
+      if (form.matches('[data-action="track-form"]')) {
+        e.preventDefault();
+        const btn = qs('button[type="submit"]', form);
+        const resultEl = qs("[data-track-result]", form);
+        if (!btn || !resultEl) return;
+        btn.disabled = true;
+        btn.textContent = "Checking…";
+        resultEl.classList.add("hidden");
+        await new Promise((r) => window.setTimeout(r, 850));
+        const statuses = [
+          { label: "Order Confirmed", detail: "We’ve received your order and it’s being prepared." },
+          { label: "Shipped", detail: "Your package is on the move with a carrier scan." },
+          { label: "Out for Delivery", detail: "Your delivery is scheduled for today." },
+          { label: "Delivered", detail: "Delivered to your address. Enjoy!" },
+        ];
+        const s = statuses[Math.floor(Math.random() * statuses.length)];
+        resultEl.innerHTML = `
+          <div class="text-[#181511] text-lg font-extrabold">${s.label}</div>
+          <div class="text-gray-600 font-medium mt-2">${s.detail}</div>
+          <div class="mt-4 text-sm text-gray-500 font-medium">Tracking updates are simulated for demo purposes.</div>
+        `;
+        resultEl.classList.remove("hidden");
+        btn.disabled = false;
+        btn.textContent = "Check Status";
+        return;
+      }
+
+      if (form.matches('[data-action="contact-form"]')) {
+        e.preventDefault();
+        const btn = qs('button[type="submit"]', form);
+        const resultEl = qs("[data-contact-result]", form);
+        if (!btn || !resultEl) return;
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+        resultEl.classList.add("hidden");
+        await new Promise((r) => window.setTimeout(r, 900));
+        const ok = Math.random() > 0.1;
+        resultEl.innerHTML = ok
+          ? `<div class="text-[#181511] text-lg font-extrabold">Message sent</div><div class="mt-2">We’ll get back to you shortly. This is a simulated submission for the prototype.</div>`
+          : `<div class="text-[#181511] text-lg font-extrabold">Something went wrong</div><div class="mt-2">Please try again in a moment.</div>`;
+        resultEl.classList.remove("hidden");
+        if (ok) form.reset();
+        btn.disabled = false;
+        btn.textContent = "Send Message";
+        return;
+      }
+
+      if (form.matches('[data-action="checkout-form"]')) {
+        e.preventDefault();
+        const btn = qs('button[type="submit"]', form);
+        const resultEl = qs("[data-checkout-result]", form);
+        if (!btn || !resultEl) return;
+        btn.disabled = true;
+        btn.textContent = "Placing order…";
+        resultEl.classList.add("hidden");
+        await new Promise((r) => window.setTimeout(r, 1200));
+        const ok = Math.random() > 0.12;
+        const orderId = `SWR-${String(Math.floor(10000 + Math.random() * 90000))}`;
+        if (ok) {
+          state.cart.items = {};
+          persist();
+          updateCartCount();
+          resultEl.innerHTML = `<div class="text-[#181511] text-lg font-extrabold">Order confirmed</div><div class="mt-2">Order <span class="font-extrabold">${orderId}</span> has been placed. This checkout is simulated for demo purposes.</div>`;
+          form.reset();
+          toast("Order placed", "success");
+        } else {
+          resultEl.innerHTML = `<div class="text-[#181511] text-lg font-extrabold">Payment failed</div><div class="mt-2">Please verify your details and try again.</div>`;
+          toast("Checkout failed", "error");
+        }
+        resultEl.classList.remove("hidden");
+        btn.disabled = false;
+        btn.textContent = "Place Order";
+        return;
+      }
+    });
+
+    window.addEventListener("hashchange", () => {
+      smoothScrollToHash(location.hash);
+    });
+  };
+
+  const init = () => {
+    ensureOverlays();
+    updateCartCount();
+    wireNewsletter();
+    wireGlobalEvents();
+
+    qsa('button[data-action="add-to-cart"]').forEach((b) => {
+      if (!b.getAttribute("title")) b.setAttribute("title", "Add to cart");
+    });
+
+    if (location.hash) smoothScrollToHash(location.hash);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else {
+    init();
+  }
+})();
+</script>
+</body></html>
