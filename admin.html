@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Shake Wag &amp; Roll Admin</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f49d25",
+              "background-light": "#f8f7f5",
+              "background-dark": "#221a10",
+              "slate-blue": "#475569",
+              "slate-blue-dark": "#334155"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"],
+              "sans": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "2xl": "1rem",
+              "3xl": "1.5rem",
+              "full": "9999px"
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { font-family: "Plus Jakarta Sans", sans-serif; }
+    </style>
+  </head>
+  <body class="bg-background-light text-[#181511] min-h-screen">
+    <header class="sticky top-0 z-40 w-full bg-white border-b border-[#f5f3f0] px-4 md:px-10 py-4 shadow-sm">
+      <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-3xl">pets</span>
+          <h1 class="text-primary text-xl font-extrabold tracking-tighter">Shake Wag &amp; Roll Admin</h1>
+        </div>
+        <div class="flex items-center gap-3">
+          <a class="h-10 px-4 inline-flex items-center gap-2 rounded-full bg-black text-white font-bold shadow-sm hover:bg-gray-800 transition-colors" href="index.html">
+            <span class="material-symbols-outlined text-base">arrow_back</span>
+            Back to Website
+          </a>
+          <button id="logoutBtn" class="hidden h-10 px-5 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors">Sign Out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1200px] mx-auto px-4 md:px-8 py-10 space-y-8">
+      <div class="bg-white rounded-2xl border border-[#f5f3f0] p-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-black">Store Admin Panel</h2>
+            <p class="text-gray-500 font-medium">Manage products for <span id="storeIdLabel" class="font-bold text-[#181511]">—</span></p>
+          </div>
+          <div id="statusBanner" class="text-sm font-semibold text-gray-500"></div>
+        </div>
+      </div>
+
+      <section id="loginSection" class="bg-white rounded-2xl border border-[#f5f3f0] p-6">
+        <h3 class="text-xl font-extrabold mb-4">Admin Login</h3>
+        <form id="loginForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
+          <input id="loginEmail" class="h-12 px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Admin email" type="email" required/>
+          <input id="loginPassword" class="h-12 px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Password" type="password" required/>
+          <button class="h-12 px-6 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors md:col-span-2" type="submit">Sign In</button>
+        </form>
+        <p id="loginError" class="mt-3 text-sm font-semibold text-red-500 hidden"></p>
+      </section>
+
+      <section id="adminSection" class="hidden space-y-8">
+        <div class="bg-white rounded-2xl border border-[#f5f3f0] p-6">
+          <h3 class="text-xl font-extrabold mb-4">Add Product</h3>
+          <form id="addProductForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input id="addName" class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary md:col-span-2" placeholder="Product name" required/>
+            <input id="addPrice" class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Price (e.g. 24.99)" type="number" step="0.01" min="0" required/>
+            <input id="addCategory" class="h-12 w-full px-4 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Category"/>
+            <label class="flex items-center gap-3 text-sm font-semibold text-gray-500 md:col-span-2">
+              <input id="addBestSeller" class="h-4 w-4 rounded border-[#f5f3f0] text-primary focus:ring-primary" type="checkbox"/>
+              Show in Best Sellers
+            </label>
+            <div class="md:col-span-2" data-image-wrapper="add">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Image</span>
+                <button class="text-xs font-semibold text-primary hover:text-orange-600" data-action="clear-image" type="button">Remove</button>
+              </div>
+              <div class="border-2 border-dashed border-[#f5f3f0] rounded-xl px-4 py-6 text-center text-sm font-semibold text-gray-500 hover:border-primary hover:text-[#181511] transition-colors cursor-pointer" data-image-drop>
+                <div>Drag &amp; drop an image here</div>
+                <div class="text-xs font-semibold text-gray-400 mt-1">or click to upload</div>
+              </div>
+              <div class="mt-3 h-32 rounded-xl bg-gray-100 bg-cover bg-center hidden" data-image-preview></div>
+              <div class="mt-2 text-xs font-semibold text-gray-500" data-image-status></div>
+              <input id="addImageInput" class="hidden" data-image-input accept="image/*" type="file"/>
+              <input id="addImageUrl" type="hidden"/>
+            </div>
+            <textarea id="addDescription" class="w-full px-4 py-3 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary md:col-span-2" rows="3" placeholder="Short description"></textarea>
+            <button class="h-12 px-6 bg-primary text-white rounded-lg font-bold hover:bg-orange-500 transition-colors md:col-span-2" type="submit">Add Product</button>
+          </form>
+          <p id="addProductStatus" class="mt-3 text-sm font-semibold text-gray-500"></p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-[#f5f3f0] p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-extrabold">Products</h3>
+            <span id="productsCount" class="text-sm font-bold text-gray-500">0 items</span>
+          </div>
+          <div class="overflow-auto border border-[#f5f3f0] rounded-xl">
+            <table class="min-w-[1000px] w-full text-sm">
+              <thead class="bg-[#faf9f7] text-gray-500 uppercase text-xs">
+                <tr>
+                  <th class="text-left px-4 py-3">Name</th>
+                  <th class="text-left px-4 py-3">Price</th>
+                  <th class="text-left px-4 py-3">Image</th>
+                  <th class="text-left px-4 py-3">Category</th>
+                  <th class="text-left px-4 py-3">Description</th>
+                  <th class="text-left px-4 py-3">Best Seller</th>
+                  <th class="text-left px-4 py-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="productsList" class="divide-y divide-[#f5f3f0]"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="deleteModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 px-4">
+      <div class="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-extrabold text-[#181511]">Delete product</h3>
+            <p class="mt-2 text-sm font-medium text-gray-500">Are you sure you want to delete <span id="deleteModalName" class="font-bold text-[#181511]">this product</span>?</p>
+          </div>
+          <button class="h-9 w-9 rounded-full border border-[#f5f3f0] text-gray-500 hover:text-[#181511] transition-colors" data-delete-cancel>
+            <span class="material-symbols-outlined text-base">close</span>
+          </button>
+        </div>
+        <div class="mt-6 flex items-center justify-end gap-3">
+          <button class="h-10 px-4 rounded-lg border border-[#f5f3f0] font-bold text-gray-500 hover:text-[#181511] hover:border-gray-300 transition-colors" data-delete-cancel>Cancel</button>
+          <button class="h-10 px-4 rounded-lg bg-red-500 font-bold text-white hover:bg-red-600 transition-colors" data-delete-confirm>Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+      import { getFirestore, collection, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+      import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-functions.js";
+      import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+      import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
+
+      const qs = (sel, root = document) => root.querySelector(sel);
+      const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+      const statusBanner = qs("#statusBanner");
+      const loginSection = qs("#loginSection");
+      const adminSection = qs("#adminSection");
+      const loginError = qs("#loginError");
+      const loginForm = qs("#loginForm");
+      const logoutBtn = qs("#logoutBtn");
+      const storeIdLabel = qs("#storeIdLabel");
+      const addProductForm = qs("#addProductForm");
+      const addProductStatus = qs("#addProductStatus");
+      const addProductSubmit = qs('#addProductForm button[type="submit"]');
+      const productsList = qs("#productsList");
+      const productsCount = qs("#productsCount");
+      const deleteModal = qs("#deleteModal");
+      const deleteModalName = qs("#deleteModalName");
+      const deleteCancelBtns = qsa("[data-delete-cancel]");
+      const deleteConfirmBtn = qs("[data-delete-confirm]");
+
+      const parseEnv = (text) => {
+        return text.split(/\r?\n/).reduce((acc, line) => {
+          const match = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
+          if (!match) return acc;
+          let value = match[2] || "";
+          if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+            value = value.slice(1, -1);
+          }
+          acc[match[1]] = value;
+          return acc;
+        }, {});
+      };
+
+      const setStatus = (message, type = "info") => {
+        statusBanner.textContent = message;
+        statusBanner.className = `text-sm font-semibold ${
+          type === "error" ? "text-red-500" : type === "success" ? "text-emerald-600" : "text-gray-500"
+        }`;
+      };
+
+      const loadEnv = async () => {
+        try {
+          const res = await fetch(".env", { cache: "no-store" });
+          if (!res.ok) throw new Error("Missing .env");
+          const text = await res.text();
+          return parseEnv(text);
+        } catch (error) {
+          return null;
+        }
+      };
+
+      const fallbackEnv = {
+        VITE_FIREBASE_API_KEY: "AIzaSyCqAoxETs_gyv_HWVa6O1jx0nCFZfRBdQA",
+        VITE_FIREBASE_AUTH_DOMAIN: "multi-tanent-projects.firebaseapp.com",
+        VITE_FIREBASE_PROJECT_ID: "multi-tanent-projects",
+        VITE_FIREBASE_STORAGE_BUCKET: "multi-tanent-projects.firebasestorage.app",
+        VITE_FIREBASE_MESSAGING_SENDER_ID: "994746165516",
+        VITE_FIREBASE_APP_ID: "1:994746165516:web:7a2422e6ad6b0d3c41c129",
+        VITE_STORE_ID: "Martin-shakeWagDog"
+      };
+
+      const env = (await loadEnv()) || fallbackEnv;
+      if (env === fallbackEnv) {
+        setStatus("Loaded embedded config.", "info");
+      }
+
+      const firebaseConfig = env
+        ? {
+            apiKey: env.VITE_FIREBASE_API_KEY,
+            authDomain: env.VITE_FIREBASE_AUTH_DOMAIN,
+            projectId: env.VITE_FIREBASE_PROJECT_ID,
+            storageBucket: env.VITE_FIREBASE_STORAGE_BUCKET,
+            messagingSenderId: env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+            appId: env.VITE_FIREBASE_APP_ID
+          }
+        : null;
+
+      const STORE_ID = env?.VITE_STORE_ID || "";
+      storeIdLabel.textContent = STORE_ID || "Missing store ID";
+
+      if (!firebaseConfig || !STORE_ID) {
+        setStatus("Missing Firebase config or store ID.", "error");
+      }
+
+      const app = firebaseConfig ? initializeApp(firebaseConfig) : null;
+      const db = app ? getFirestore(app) : null;
+      const functions = app ? getFunctions(app) : null;
+      const storage = app ? getStorage(app) : null;
+      const auth = app ? getAuth(app) : null;
+      if (auth) {
+        setPersistence(auth, browserLocalPersistence).catch(() => {});
+      }
+
+      const callFunction = async (functionName, data = {}) => {
+        if (!functions) throw new Error("Functions not initialized");
+        const fn = httpsCallable(functions, functionName);
+        const response = await fn({ ...data, storeId: STORE_ID });
+        return response.data;
+      };
+
+      const getImageWrapper = (el) => el?.closest("[data-image-wrapper]");
+      const getImageInput = (wrap) => qs("[data-image-input]", wrap);
+      const getImagePreview = (wrap) => qs("[data-image-preview]", wrap);
+      const getImageStatus = (wrap) => qs("[data-image-status]", wrap);
+      const getImageUrlField = (wrap) => qs('[data-field="imageUrl"]', wrap) || qs("#addImageUrl", wrap);
+
+      const setImageStatus = (wrap, message = "", tone = "info") => {
+        const el = getImageStatus(wrap);
+        if (!el) return;
+        el.textContent = message;
+        el.classList.remove("text-gray-500", "text-red-500", "text-emerald-600");
+        el.classList.add(tone === "error" ? "text-red-500" : tone === "success" ? "text-emerald-600" : "text-gray-500");
+      };
+
+      const setImagePreview = (wrap, url) => {
+        const preview = getImagePreview(wrap);
+        if (!preview) return;
+        if (url) {
+          preview.style.backgroundImage = `url('${url}')`;
+          preview.classList.remove("hidden");
+        } else {
+          preview.style.backgroundImage = "";
+          preview.classList.add("hidden");
+        }
+      };
+
+      const setImageUrl = (wrap, url) => {
+        const field = getImageUrlField(wrap);
+        if (field) field.value = url || "";
+      };
+
+      const clearImageWrapper = (wrap) => {
+        if (!wrap) return;
+        setImagePreview(wrap, "");
+        setImageUrl(wrap, "");
+        setImageStatus(wrap, "");
+        const input = getImageInput(wrap);
+        if (input) input.value = "";
+      };
+
+      const setEditMode = (productId, data = {}) => {
+        addProductForm.dataset.editProductId = productId || "";
+        if (addProductSubmit) addProductSubmit.textContent = productId ? "Update Product" : "Add Product";
+        const addImageWrap = qs('[data-image-wrapper="add"]');
+        clearImageWrapper(addImageWrap);
+        qs("#addName").value = data.name || "";
+        qs("#addPrice").value = Number.isFinite(Number(data.price)) ? Number(data.price) : 0;
+        qs("#addCategory").value = data.category || "";
+        qs("#addDescription").value = data.description || "";
+        const bestSellerInput = qs("#addBestSeller");
+        if (bestSellerInput) bestSellerInput.checked = Boolean(data.bestSeller);
+        if (data.imageUrl) {
+          setImagePreview(addImageWrap, data.imageUrl);
+          setImageUrl(addImageWrap, data.imageUrl);
+        }
+      };
+
+      const exitEditMode = () => {
+        delete addProductForm.dataset.editProductId;
+        if (addProductSubmit) addProductSubmit.textContent = "Add Product";
+      };
+
+      let pendingDeleteId = "";
+      const openDeleteModal = (productId, name = "") => {
+        pendingDeleteId = productId || "";
+        if (deleteModalName) deleteModalName.textContent = name || "this product";
+        if (deleteConfirmBtn) {
+          deleteConfirmBtn.disabled = false;
+          deleteConfirmBtn.textContent = "Delete";
+        }
+        deleteModal?.classList.remove("hidden");
+        deleteModal?.classList.add("flex");
+        document.body.classList.add("overflow-hidden");
+      };
+
+      const closeDeleteModal = () => {
+        pendingDeleteId = "";
+        deleteModal?.classList.add("hidden");
+        deleteModal?.classList.remove("flex");
+        document.body.classList.remove("overflow-hidden");
+      };
+
+      deleteCancelBtns.forEach((btn) => {
+        btn.addEventListener("click", () => closeDeleteModal());
+      });
+
+      deleteModal?.addEventListener("click", (event) => {
+        if (event.target === deleteModal) closeDeleteModal();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !deleteModal?.classList.contains("hidden")) {
+          closeDeleteModal();
+        }
+      });
+
+      deleteConfirmBtn?.addEventListener("click", async () => {
+        if (!pendingDeleteId) {
+          closeDeleteModal();
+          return;
+        }
+        deleteConfirmBtn.disabled = true;
+        deleteConfirmBtn.textContent = "Deleting...";
+        try {
+          await callFunction("deleteProduct", { productId: pendingDeleteId });
+          setStatus("Product deleted.", "success");
+          if (addProductForm.dataset.editProductId === pendingDeleteId) {
+            addProductForm.reset();
+            clearImageWrapper(qs('[data-image-wrapper="add"]'));
+            exitEditMode();
+          }
+        } catch (error) {
+          setStatus(error?.message || "Unable to delete product.", "error");
+        } finally {
+          closeDeleteModal();
+        }
+      });
+
+      const uploadImage = async (wrap, file) => {
+        if (!storage || !STORE_ID) {
+          setImageStatus(wrap, "Storage not configured.", "error");
+          return;
+        }
+        if (!file.type.startsWith("image/")) {
+          setImageStatus(wrap, "Please upload an image file.", "error");
+          return;
+        }
+        wrap.dataset.uploading = "true";
+        setImageStatus(wrap, "Uploading...", "info");
+        const safeName = file.name.replace(/[^a-z0-9_.-]/gi, "-").toLowerCase();
+        const path = `stores/${STORE_ID}/products/${Date.now()}-${Math.random().toString(36).slice(2)}-${safeName}`;
+        const ref = storageRef(storage, path);
+        await uploadBytes(ref, file, { contentType: file.type });
+        const url = await getDownloadURL(ref);
+        setImagePreview(wrap, url);
+        setImageUrl(wrap, url);
+        setImageStatus(wrap, "Uploaded", "success");
+        wrap.dataset.uploading = "false";
+      };
+
+      const setLoginError = (message) => {
+        if (!message) {
+          loginError.classList.add("hidden");
+          loginError.textContent = "";
+          return;
+        }
+        loginError.textContent = message;
+        loginError.classList.remove("hidden");
+      };
+
+      const showAdmin = () => {
+        loginSection.classList.add("hidden");
+        adminSection.classList.remove("hidden");
+        logoutBtn.classList.remove("hidden");
+      };
+
+      const showLogin = () => {
+        loginSection.classList.remove("hidden");
+        adminSection.classList.add("hidden");
+        logoutBtn.classList.add("hidden");
+      };
+
+      let unsubscribe = null;
+
+      const startProductListener = () => {
+        if (!db) return;
+        if (unsubscribe) unsubscribe();
+        const ref = collection(db, "stores", STORE_ID, "products");
+        const q = query(ref, orderBy("name"));
+        unsubscribe = onSnapshot(q, (snap) => {
+          const items = snap.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+          renderProducts(items);
+        });
+      };
+
+      const renderProducts = (items) => {
+        productsCount.textContent = `${items.length} item${items.length === 1 ? "" : "s"}`;
+        if (!items.length) {
+          productsList.innerHTML = `
+            <tr>
+              <td colspan="7" class="px-4 py-6 text-center text-gray-500 font-semibold">No products yet.</td>
+            </tr>
+          `;
+          return;
+        }
+        productsList.innerHTML = items
+          .map((item) => {
+            const price = Number(item.price || 0);
+            return `
+              <tr data-product-id="${item.id}">
+                <td class="px-4 py-3">
+                  <input class="h-10 w-full min-w-[180px] px-3 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" data-field="name" value="${item.name || ""}" placeholder="Name"/>
+                </td>
+                <td class="px-4 py-3">
+                  <input class="h-10 w-full min-w-[120px] px-3 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" data-field="price" type="number" step="0.01" min="0" value="${Number.isFinite(price) ? price : 0}"/>
+                </td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-3">
+                    <div class="h-14 w-14 rounded-lg bg-gray-100 overflow-hidden border border-[#f5f3f0]">
+                      ${
+                        item.imageUrl
+                          ? `<img src="${item.imageUrl}" alt="${item.name || "Product image"}" class="h-full w-full object-cover"/>`
+                          : `<div class="h-full w-full flex items-center justify-center text-[10px] font-semibold text-gray-400">No image</div>`
+                      }
+                    </div>
+                    <input type="hidden" data-field="imageUrl" value="${item.imageUrl || ""}"/>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <input class="h-10 w-full min-w-[140px] px-3 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" data-field="category" value="${item.category || ""}" placeholder="Category"/>
+                </td>
+                <td class="px-4 py-3">
+                  <textarea class="w-full min-w-[220px] px-3 py-2 rounded-lg border border-[#f5f3f0] bg-white focus:outline-none focus:ring-2 focus:ring-primary" rows="2" data-field="description" placeholder="Description">${item.description || ""}</textarea>
+                </td>
+                <td class="px-4 py-3">
+                  <label class="inline-flex items-center gap-2 text-sm font-semibold text-gray-500">
+                    <input class="h-4 w-4 rounded border-[#f5f3f0] text-primary focus:ring-primary" data-field="bestSeller" type="checkbox" ${item.bestSeller ? "checked" : ""}/>
+                    Best Seller
+                  </label>
+                </td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-3">
+                    <button class="h-10 px-4 bg-black text-white rounded-lg font-bold hover:bg-gray-800 transition-colors" data-action="update-product">Update</button>
+                    <button class="h-10 px-4 bg-red-500 text-white rounded-lg font-bold hover:bg-red-600 transition-colors" data-action="delete-product">Delete</button>
+                  </div>
+                </td>
+              </tr>
+            `;
+          })
+          .join("");
+      };
+
+      const handleImageFile = async (wrap, file) => {
+        if (!wrap || !file) return;
+        try {
+          await uploadImage(wrap, file);
+        } catch (error) {
+          wrap.dataset.uploading = "false";
+          setImageStatus(wrap, error?.message || "Upload failed.", "error");
+        }
+      };
+
+      const setDropActive = (zone, active) => {
+        if (!zone) return;
+        zone.classList.toggle("border-primary", active);
+        zone.classList.toggle("bg-orange-50", active);
+      };
+
+      adminSection.addEventListener("click", (event) => {
+        const clearBtn = event.target.closest('[data-action="clear-image"]');
+        if (clearBtn) {
+          clearImageWrapper(getImageWrapper(clearBtn));
+          return;
+        }
+        const dropZone = event.target.closest("[data-image-drop]");
+        if (dropZone) {
+          const wrap = getImageWrapper(dropZone);
+          const input = getImageInput(wrap);
+          input?.click();
+        }
+      });
+
+      adminSection.addEventListener("change", (event) => {
+        const input = event.target.closest("[data-image-input]");
+        if (!input) return;
+        const wrap = getImageWrapper(input);
+        const file = input.files?.[0];
+        if (file) handleImageFile(wrap, file);
+      });
+
+      adminSection.addEventListener("dragover", (event) => {
+        const dropZone = event.target.closest("[data-image-drop]");
+        if (!dropZone) return;
+        event.preventDefault();
+        setDropActive(dropZone, true);
+      });
+
+      adminSection.addEventListener("dragleave", (event) => {
+        const dropZone = event.target.closest("[data-image-drop]");
+        if (!dropZone) return;
+        setDropActive(dropZone, false);
+      });
+
+      adminSection.addEventListener("drop", (event) => {
+        const dropZone = event.target.closest("[data-image-drop]");
+        if (!dropZone) return;
+        event.preventDefault();
+        setDropActive(dropZone, false);
+        const wrap = getImageWrapper(dropZone);
+        const file = event.dataTransfer?.files?.[0];
+        if (file) handleImageFile(wrap, file);
+      });
+
+      loginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        setLoginError("");
+        if (!auth) return;
+        const email = qs("#loginEmail").value.trim();
+        const password = qs("#loginPassword").value;
+        try {
+          await signInWithEmailAndPassword(auth, email, password);
+          setStatus("Signed in", "success");
+        } catch (error) {
+          setLoginError(error.message || "Login failed.");
+        }
+      });
+
+      logoutBtn.addEventListener("click", async () => {
+        if (!auth) return;
+        await signOut(auth);
+      });
+
+      addProductForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        addProductStatus.textContent = "";
+        try {
+          const addImageWrap = qs('[data-image-wrapper="add"]');
+          if (addImageWrap?.dataset.uploading === "true") {
+            addProductStatus.textContent = "Image upload in progress.";
+            return;
+          }
+          const name = qs("#addName").value.trim();
+          const price = parseFloat(qs("#addPrice").value);
+          const imageUrl = qs("#addImageUrl").value.trim();
+          const category = qs("#addCategory").value.trim();
+          const description = qs("#addDescription").value.trim();
+          const bestSeller = Boolean(qs("#addBestSeller")?.checked);
+
+          const editProductId = addProductForm.dataset.editProductId;
+          const productData = { name, price };
+          if (imageUrl) productData.imageUrl = imageUrl;
+          if (category) productData.category = category;
+          if (description) productData.description = description;
+          productData.bestSeller = bestSeller;
+
+          if (editProductId) {
+            const updates = {
+              name,
+              price: Number.isFinite(price) ? price : 0,
+              imageUrl,
+              category,
+              description,
+              bestSeller
+            };
+            await callFunction("updateProduct", { productId: editProductId, updates });
+            addProductStatus.textContent = "Product updated successfully.";
+            exitEditMode();
+          } else {
+            await callFunction("addProduct", { productData });
+            addProductStatus.textContent = "Product added successfully.";
+          }
+          addProductForm.reset();
+          clearImageWrapper(addImageWrap);
+        } catch (error) {
+          addProductStatus.textContent = error.message || "Unable to add product.";
+        }
+      });
+
+      productsList.addEventListener("click", async (event) => {
+        const btn = event.target.closest("[data-action]");
+        if (!btn) return;
+        const card = btn.closest("[data-product-id]");
+        if (!card) return;
+        const productId = card.dataset.productId;
+        if (btn.dataset.action === "delete-product") {
+          const name = qs('[data-field="name"]', card)?.value?.trim();
+          openDeleteModal(productId, name);
+          return;
+        }
+        if (btn.dataset.action === "update-product") {
+          const fields = qsa("[data-field]", card);
+          const values = {};
+          fields.forEach((field) => {
+            const key = field.dataset.field;
+            let value = field.type === "checkbox" ? field.checked : field.value;
+            if (key === "price") {
+              const parsed = parseFloat(value);
+              value = Number.isFinite(parsed) ? parsed : 0;
+            } else if (typeof value === "string") {
+              value = value.trim();
+            }
+            values[key] = value;
+          });
+          setEditMode(productId, values);
+          addProductStatus.textContent = "Editing existing product.";
+          addProductForm.scrollIntoView({ behavior: "smooth", block: "start" });
+          qs("#addName")?.focus({ preventScroll: true });
+        }
+      });
+
+      let lastAuthError = "";
+      if (auth) {
+        onAuthStateChanged(auth, async (user) => {
+          if (!user) {
+            showLogin();
+            setStatus(lastAuthError || "Please sign in to continue.", lastAuthError ? "error" : "info");
+            lastAuthError = "";
+            return;
+          }
+          setStatus("Verifying access...", "info");
+          let token = await user.getIdTokenResult(true);
+          if (token.claims.role !== "admin" || token.claims.storeId !== STORE_ID) {
+            try {
+              await callFunction("bootstrapAdminClaims");
+              token = await user.getIdTokenResult(true);
+            } catch (error) {
+              lastAuthError = error?.message || "This account is not authorized for this store.";
+            }
+          }
+          if (token.claims.role !== "admin" || token.claims.storeId !== STORE_ID) {
+            lastAuthError = lastAuthError || "This account is not authorized for this store.";
+            showLogin();
+            setStatus(lastAuthError, "error");
+            return;
+          }
+          showAdmin();
+          setStatus("Admin access confirmed.", "success");
+          startProductListener();
+        });
+      }
+    </script>
+  </body>
+</html>
